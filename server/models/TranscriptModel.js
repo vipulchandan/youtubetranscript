@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
 
-// Define the video schema
 const transcriptSchema = new mongoose.Schema({
     videoUrl: {
         type: String,

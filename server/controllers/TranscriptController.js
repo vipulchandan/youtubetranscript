@@ -23,7 +23,7 @@ async function fetchVideoInfo(videoUrl) {
 async function fetchVideoTranscript(videoId) {
   const captions = await getSubtitles({
     videoID: videoId,
-    lang: 'en', // Assuming English captions are required
+    lang: 'en', // English captions
   });
 
   if (!captions || captions.length === 0) {

@@ -22,18 +22,3 @@ const App = () => {
 };
 
 export default App;
-// const App = () => {
-//   const [videoData, setVideoData] = useState(null);
-
-//   return (
-//     <div className="container">
-//       <h1>YouTube Video Subtitle Viewer</h1>
-//       <VideoForm setVideoData={setVideoData} />
-//       {videoData && (
-//         <VideoPlayer videoUrl={videoData.videoUrl} transcript={videoData.transcript} />
-//       )}
-//     </div>
-//   );
-// };
-
-// export default App;

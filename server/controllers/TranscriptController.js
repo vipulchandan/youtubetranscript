@@ -67,6 +67,12 @@ const createVideoTranscript = async (req, res) => {
     const videoId = extractVideoId(videoUrl);
     const existingVideo = await TranscriptModel.findOne({ videoId });
 
+    if(!existingVideo) {
+      return res.status(404).json({
+        error: 'Video not found.',
+      });
+    }
+
     if (existingVideo) {
       res.json({
         videoUrl: existingVideo.videoUrl,

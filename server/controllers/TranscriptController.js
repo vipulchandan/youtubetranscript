@@ -95,6 +95,13 @@ const createVideoTranscript = async (req, res) => {
       const videoInfo = await fetchVideoInfo(videoUrl);
       const transcriptData = await fetchVideoTranscript(videoId);
 
+      // Check if the transcriptData has an error property (videoId is invalid)
+      //  if (transcriptData.error) {
+      //   return res.status(400).json({
+      //     error: transcriptData.error,
+      //   });
+      // }
+
       // Save video details in MongoDB
       const video = new TranscriptModel({
         videoId,
